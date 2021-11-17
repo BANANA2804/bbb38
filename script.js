@@ -64,6 +64,4 @@ $('#copy').click(function() {
 	    $temp.val($('#passwordDisplay').text()).select();
 	    document.execCommand("copy");
 	    $temp.remove();
-
-	    $(this).text('Скопировано');
 	});
