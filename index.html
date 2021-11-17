@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
   
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js" defer></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="script.js" defer></script>
   
-  <title>Password Generator</title>
+	<title>Password Generator</title>
 </head>
-<body>
-  <div class="container">
-    <h1 class="title">Генератор паролей</h1>
-    <h3 class="password-display" id="passwordDisplay"></h3>
-    <form id="passwordGeneratorForm" class="form">
-      <label for="characterAmountNumber">Колличество символов</label>
-      <div class="character-amount-container">
-        <input type="range" min="1" max="50" value="10" id="characterAmountRange">
-        <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
-      </div>
+	<body>
+		<div class="container">
+			<h1 class="title">Генератор паролей</h1>
+			<div class="password-display" id="passwordDisplay"></div>
+			<form id="passwordGeneratorForm" class="form">
+				<label for="characterAmountNumber">Колличество символов</label>
+				<div class="character-amount-container">
+					<input type="range" min="4" max="32" value="12" id="characterAmountRange">
+					<input class="custom-range" type="number" min="4" max="32" value="12" id="characterAmountNumber">
+				</div>
 
-      <label for="includeUppercase">Прописные буквы</label>
-      <input type="checkbox" id="includeUppercase">
+				<label for="includeUppercase">Прописные буквы</label>
+				<input type="checkbox" id="includeUppercase">
 
-      <label for="includeNumbers">Числа</label>
-      <input type="checkbox" id="includeNumbers">
+				<label for="includeNumbers">Числа</label>
+				<input type="checkbox" id="includeNumbers">
 
-      <label for="includeSymbols">Спецсимволы</label>
-      <input type="checkbox" id="includeSymbols">
-
-      <button type="submit" class="btn">Generate Password</button>
-	  <button id="copy">Копировать текст</button>
-    </form>
-  </div>
-</body>
+				<label for="includeSymbols">Спецсимволы</label>
+				<input type="checkbox" id="includeSymbols">
+		
+				<button type="submit" class="btn">Generate Password</button>
+				<button id="copy"><img src="https://img.icons8.com/material-outlined/48/000000/copy.png"/></button>
+			</form>	
+		</div>
+	</body>
 </html>
