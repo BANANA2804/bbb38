@@ -1,9 +1,17 @@
-body {
+::selection {
+   background: transparent;
+}
+::-moz-selection {
+   background: transparent;
+}
+
+body {	
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
   
 .container { 
 	padding: 3rem;
@@ -66,12 +74,8 @@ label {
     cursor: pointer;
     border-radius: 1rem;
 }
-  
-.btn:hover {
-    background-color: #FFFFFF33;
-}
-  
-button, input, textarea {
+ 
+input, textarea {
 	outline: none;
 	border: none;
 } 
@@ -82,5 +86,9 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }  
 
+.custom-range{
+	position: relative;
+	left: 10px;
+}
 
 
